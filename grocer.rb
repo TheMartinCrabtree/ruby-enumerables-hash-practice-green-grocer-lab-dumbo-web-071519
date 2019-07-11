@@ -35,7 +35,6 @@ def apply_coupons(cart, coupons)
         coupon_update.merge!(temp)
       else
         coupon_update["#{item} W/COUPON"][:count] += 1
-        #hash["#{item} W/COUPON"][:price] += coupon_hash[:cost]
       end
   
   
