@@ -40,7 +40,7 @@ def apply_coupons(cart, coupons)
       end
   end
   
-  
+  return coupon_update
 end
 
 
