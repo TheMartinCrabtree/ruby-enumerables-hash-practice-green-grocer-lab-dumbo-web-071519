@@ -30,6 +30,13 @@ def apply_coupons(cart, coupons)
         :count => 1
         }
       }
+      
+      if coupon_update["#{item} W/COUPON"].nil?
+        coupon_update.merge!(temp)
+      else
+        coupon_update["#{item} W/COUPON"][:count] += 1
+        #hash["#{item} W/COUPON"][:price] += coupon_hash[:cost]
+      end
   
   
   
