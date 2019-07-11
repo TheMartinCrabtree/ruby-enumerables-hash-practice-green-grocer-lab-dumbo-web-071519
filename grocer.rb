@@ -36,7 +36,7 @@ def apply_coupons(cart, coupons)
         else
           coupon_update["#{item} W/COUPON"][:count] += 1
         end
-        
+        coupon_update[item][:count] -= coupon_info[:num]
       end
   
   
