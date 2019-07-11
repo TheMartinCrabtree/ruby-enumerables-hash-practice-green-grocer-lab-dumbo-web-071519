@@ -18,7 +18,16 @@ end
 
 
 def apply_coupons(cart, coupons)
-  # code here
+  coupon_update = cart
+  
+  coupons.each do |coupon_info|
+    item = coupon_info[:item]
+    
+    if (!coupon_update[item].nil? && coupon_update[item][:count] >= coupon_info[:num])
+      temp
+  
+  
+  
 end
 
 
