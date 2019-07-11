@@ -24,17 +24,19 @@ def apply_coupons(cart, coupons)
     item = coupon_info[:item]
     
     if (!coupon_update[item].nil? && coupon_update[item][:count] >= coupon_info[:num])
-      temp = {"#{item} W/COUPON" => {
-        :price => coupon_info[:cost],
-        :clearance => coupon_update[item][:clearance],
-        :count => 1
+        temp = {"#{item} W/COUPON" => {
+         :price => coupon_info[:cost],
+          :clearance => coupon_update[item][:clearance],
+          :count => 1
+         }
         }
-      }
       
-      if coupon_update["#{item} W/COUPON"].nil?
-        coupon_update.merge!(temp)
-      else
-        coupon_update["#{item} W/COUPON"][:count] += 1
+        if coupon_update["#{item} W/COUPON"].nil?
+          coupon_update.merge!(temp)
+        else
+          coupon_update["#{item} W/COUPON"][:count] += 1
+        end
+        
       end
   
   
